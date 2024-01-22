@@ -1,0 +1,139 @@
+:root {
+    --yellow: #EAC926;
+    --blue: #03264C;
+    --ligth-blue: #3483fa;
+    --dark-gray: #667;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+    --black: #202023;
+    --white: #fff;
+    --red: #f23d4f;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--light-gray);
+    margin: 0;
+}
+
+form {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+input[type="submit"],
+input[type="reset"],
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: .3rem;
+    font-size: 16px;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.first-grid-item .form-group:last-child div,
+.second-grid-item .form-group:nth-child(1) div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.first-grid-item .form-group:last-child label,
+.second-grid-item .form-group:nth-child(1) label {
+    margin-bottom: 0;
+}
+
+input[type="submit"] {
+    margin-bottom: 1rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--ligth-blue);
+    color: var(--white);
+    font-size: 1rem;
+    border: none;
+}
+
+.required {
+    color: var(--red);
+}
+
+@media (min-width: 768px) {
+    form {
+        width: 60%;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        align-items: center;
+    }
+
+    form {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .first-grid-item {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .second-grid-item {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        cursor: pointer;
+    }
+}

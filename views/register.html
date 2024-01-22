@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Mercado Liebre</title>
+</head>
+
+<body>
+    <form action="/signup" method="POST">
+        <h1>Regístrate</h1>
+
+        <div class="first-grid-item">
+            <div class="form-group">
+                <label for="firstName">Nombre <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Mercado" pattern="^[A-Za-z\s]{2,50}$"
+                    title="El nombre proporcionado no es válido. Asegúrate de que contenga al menos dos caracteres y solo incluya letras (mayúsculas y minúsculas), espacios, apóstrofes y guiones."
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Apellido <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" pattern="^[A-Za-z\s'-]{2,50}$"
+                    title="El apellido proporcionado no es válido. Asegúrate de que contenga al menos dos caracteres y solo incluya letras (mayúsculas y minúsculas), espacios, apóstrofes y guiones."
+                    placeholder="Liebre">
+            </div>
+            <div class="form-group">
+                <label for="username">Nombre de usuario <span class="required">*</span></label>
+                <input type="text" id="username" name="username" pattern="^[a-z0-9_-]{3,15}$"
+                    title="Cadena alfanumérica que puede incluir _ y - con una longitud de 3 a 16 caracteres."
+                    placeholder="mercadoLiebre">
+            </div>
+            <div class="form-group">
+                <label for="date-of-birthday">Fecha de nacimiento <span class="required">*</span></label>
+                <input type="date" id="date-of-birthday" name="dateOfBirthday" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Domicilio <span class="required">*</span></label>
+                <textarea id="address" name="address" placeholder="Av. Mercado liebre" required></textarea>
+            </div>
+            <div class="form-group">
+                <p>Perfil de usuario <span class="required">*</span></p>
+                <div>
+                    <input type="radio" id="buyer" name="profile" value="buyer" required>
+                    <label for="buyer">Comprador</label>
+                </div>
+                <div>
+                    <input type="radio" id="seller" name="profile" value="seller" required>
+                    <label for="seller">Vendedor</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="second-grid-item">
+            <div class="form-group">
+                <p>Categorías de interés <span class="required">*</span></p>
+                <div>
+                    <input type="checkbox" id="electro" name="electro">
+                    <label for="electro">Electro</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="moda" name="moda">
+                    <label for="moda">Moda</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hogar" name="hogar">
+                    <label for="hogar">Hogar</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="jugueteria" name="jugueteria">
+                    <label for="jugueteria">Juguetería</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="vida-sana" name="vidaSana">
+                    <label for="vida-sana">Vida sana</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="user-photo">Foto de usuario <span class="required">*</span></label>
+                <input id="user-photo" type="file" name="user-photo" accept="image/png, image/jpeg" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña <span class="required">*</span></label>
+                <input type="password" id="password" placeholder="Ingrese una contraseña"
+                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
+                    title="Mínimo ocho caracteres, al menos una letra mayúscula inglesa, una letra minúscula inglesa, un número y un carácter especial."
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmar contraseña <span class="required">*</span></label>
+                <input type="password" id="confirm-password" placeholder="Ingrese confirmación de la contraseña"
+                    required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrarme">
+                <input type="reset" value="Reiniciar formulario">
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>

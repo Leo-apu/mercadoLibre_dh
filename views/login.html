@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Mercado Liebre</title>
+</head>
+
+<body>
+    <form action="/login" method="POST">
+        <h1>Inicia sesión</h1>
+        <div class="form-group">
+            <label for="username">Nombre de usuario <span class="required">*</span></label>
+            <input type="text" id="username" name="username" placeholder="Nombre de usuario"
+                pattern="^[a-z0-9_-]{3,15}$"
+                title="Cadena alfanumérica que puede incluir _ y - con una longitud de 3 a 16 caracteres." required>
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña <span class="required">*</span></label>
+            <input id="password" type="password" placeholder="Contraseña" name="password"
+                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
+                title="Mínimo ocho caracteres, al menos una letra mayúscula inglesa, una letra minúscula inglesa, un número y un carácter especial."
+                required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Iniciar sesión">
+        </div>
+    </form>
+</body>
+
+</html>
