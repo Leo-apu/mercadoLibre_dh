@@ -31,10 +31,10 @@ body {
 .main-header div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 1rem;
+    padding-top: 1rem ;
 }
 
 .main-header div p {
@@ -46,7 +46,7 @@ body {
 }
 
 form {
-    width: initial;
+    width: 40%;
 }
 
 form input[type="search"] {
@@ -210,4 +210,118 @@ footer .copyright {
     text-align: center;
     font-size: 2em;
     margin-bottom: 10px;
+}
+
+.login-navbar,
+.site {
+    display: none;
+}
+
+@media (min-width: 361px) {
+    .description {
+        visibility: hidden;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .main-header div {
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .main-header div p {
+        margin-bottom: initial;
+    }
+
+    form {
+        width: initial;
+    }
+
+    form input[type="search"] {
+        width: initial;
+    }
+
+    main section header h2 {
+        text-align: center;
+    }
+
+    main section .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    main section article {
+        max-width: 300px;
+    }
+
+    nav .burger-menu {
+        display: none;
+    }
+
+    nav,
+    .login-navbar,
+    .site {
+        display: flex;
+        gap: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    main section header h2 {
+        text-align: initial;
+    }
+
+    main section article {
+        max-width: 250px;
+    }
+
+    form input[type="search"] {
+        width: 180px;
+    }
+
+    main section article:hover {
+        box-shadow: 6px 11px 23px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 6px 11px 23px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 6px 11px 23px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    main section article:hover .description {
+        visibility: visible;
+        margin-bottom: 0;
+    }
+
+    main section article i:hover {
+        transform: rotate(270deg);
+        will-change: transform;
+        transition: transform .2s;
+    }
+
+    footer .card-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem
+    }
+
+    footer .card-container .fa-solid.fa-user-shield:hover,
+    footer .card-container .fa-solid.fa-gift:hover,
+    footer .card-container .fa-solid.fa-credit-card:hover {
+        color: var(--yellow);
+    }
+
 }
