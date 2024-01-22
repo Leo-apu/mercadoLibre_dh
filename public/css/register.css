@@ -10,15 +10,101 @@
     --red: #f23d4f;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: var(--black);
-    background-color: var(--light-gray);
-    margin: 0;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-form {
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: var(--black);
+    background-color: var(--light-gray);
+}
+
+.main-header {
+    background-color: var(--yellow);
+    margin-bottom: 1rem;
+}
+
+.main-header div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem ;
+}
+
+.main-header div p {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 150px;
+}
+
+.main-header form {
+    width: 40%;
+}
+
+.main-header form input[type="search"] {
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+    width: 70%;
+}
+
+.main-header form button[type="submit"] {
+    border: none;
+    background-color: var(--white);
+    padding: .5rem;
+    border-radius: .5rem
+}
+
+nav>ul {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 16px;
+}
+
+nav>ul>li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.burger-menu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--ligth-blue);
+    border-radius: .5rem;
+}
+
+.fa-solid.fa-bars {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.fa-solid.fa-credit-card,
+.fa-solid.fa-gift,
+.fa-solid.fa-user-shield {
+    color: var(--ligth-blue);
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+ .login-navbar,
+.site {
+    display: none;
+}
+
+main form {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
@@ -29,13 +115,13 @@ form {
     border-radius: .5rem;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="file"],
-input[type="submit"],
-input[type="reset"],
-textarea {
+main form input[type="text"],
+main form input[type="password"],
+main form input[type="date"],
+main form input[type="file"],
+main form input[type="submit"],
+main form input[type="reset"],
+main form textarea {
     box-sizing: border-box;
     width: 100%;
     padding: .5rem;
@@ -90,6 +176,46 @@ input[type="reset"] {
     color: var(--red);
 }
 
+@media (min-width: 769px) {
+
+    .main-header div {
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .main-header div p {
+        margin-bottom: initial;
+    }
+
+    .main-header form {
+        width: initial;
+    }
+
+    .main-header form input[type="search"] {
+        width: initial;
+    }
+
+    nav .burger-menu {
+        display: none;
+    }
+
+    nav,
+    .login-navbar,
+    .site {
+        display: flex;
+        gap: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+}
+
 @media (min-width: 768px) {
     form {
         width: 60%;
@@ -98,12 +224,8 @@ input[type="reset"] {
 }
 
 @media (min-width: 1024px) {
-    body {
-        display: flex;
-        align-items: center;
-    }
 
-    form {
+    main form {
         width: 70%;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -132,8 +254,8 @@ input[type="reset"] {
         grid-row-end: 3;
     }
 
-    input[type="submit"],
-    input[type="reset"] {
+    main form input[type="submit"],
+    main form input[type="reset"] {
         cursor: pointer;
     }
 }
