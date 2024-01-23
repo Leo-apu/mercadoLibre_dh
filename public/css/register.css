@@ -34,7 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding-top: 1rem ;
+    padding-top: 1rem;
 }
 
 .main-header div p {
@@ -99,9 +99,35 @@ nav>ul>li a {
     margin-bottom: 10px;
 }
 
- .login-navbar,
+.login-navbar,
 .site {
     display: none;
+}
+
+footer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .card-container div>* {
+    text-align: center;
+}
+
+footer .card-container div h4 {
+    margin-bottom: 1rem;
+}
+
+footer .card-container>div {
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+footer .copyright {
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 main form {
@@ -214,10 +240,7 @@ input[type="reset"] {
         justify-content: space-between;
     }
 
-}
-
-@media (min-width: 768px) {
-    form {
+    main form {
         width: 60%;
         padding: 1.5rem;
     }
@@ -240,6 +263,10 @@ input[type="reset"] {
         grid-row-end: 2;
     }
 
+    .main-header form input[type="search"] {
+        width: 180px;
+    }
+
     .first-grid-item {
         grid-column-start: 1;
         grid-column-end: 2;
@@ -257,5 +284,17 @@ input[type="reset"] {
     main form input[type="submit"],
     main form input[type="reset"] {
         cursor: pointer;
+    }
+
+    footer .card-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem
+    }
+
+    footer .card-container .fa-solid.fa-user-shield:hover,
+    footer .card-container .fa-solid.fa-gift:hover,
+    footer .card-container .fa-solid.fa-credit-card:hover {
+        color: var(--yellow);
     }
 }
