@@ -19,25 +19,86 @@
 </head>
 
 <body>
-    <form action="/login" method="POST">
-        <h1>Inicia sesión</h1>
-        <div class="form-group">
-            <label for="username">Nombre de usuario <span class="required">*</span></label>
-            <input type="text" id="username" name="username" placeholder="Nombre de usuario"
-                pattern="^[a-z0-9_-]{3,15}$"
-                title="Cadena alfanumérica que puede incluir _ y - con una longitud de 3 a 16 caracteres." required>
+    <header class="main-header">
+        <div>
+            <a href="/"><img class="logo" src="/img/logo-mercado-liebre.svg" alt="Logo">
+            </a>
+
+            <form>
+                <input type="search" placeholder="Buscar productos, marcas">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <p><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito </p>
         </div>
-        <div class="form-group">
-            <label for="password">Contraseña <span class="required">*</span></label>
-            <input id="password" type="password" placeholder="Contraseña" name="password"
-                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
-                title="Mínimo ocho caracteres, al menos una letra mayúscula inglesa, una letra minúscula inglesa, un número y un carácter especial."
-                required>
+
+        <nav>
+            <ul class="site">
+                <li><a href="/">Ofertas</a></li>
+                <li><a href="/">Tiendas Oficiales</a></li>
+                <li><a href="/">Vender</a></li>
+                <li><a href="/">Ayuda</a></li>
+            </ul>
+
+            <ul class="login-navbar">
+                <li><a href="/signup">Creá tu cuenta <i class="fa-regular fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="/">Mis compras <i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form action="/login" method="POST">
+            <h1>Inicia sesión</h1>
+            <div class="form-group">
+                <label for="username">Nombre de usuario <span class="required">*</span></label>
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario"
+                    pattern="^[a-z0-9_-]{3,15}$"
+                    title="Cadena alfanumérica que puede incluir _ y - con una longitud de 3 a 16 caracteres." required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña <span class="required">*</span></label>
+                <input id="password" type="password" placeholder="Contraseña" name="password"
+                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
+                    title="Mínimo ocho caracteres, al menos una letra mayúscula inglesa, una letra minúscula inglesa, un número y un carácter especial."
+                    required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Iniciar sesión">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="card-container">
+            <div>
+                <i class="fa-solid fa-credit-card"></i>
+                <h4>Pagá con tarjeta o en efectivo</h4>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-gift"></i>
+                <h4>Envío gratis desde $ 2.500</h4>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-user-shield"></i>
+                <h4>Seguridad, de principio a fin</h4>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.</p>
+            </div>
         </div>
-        <div class="form-group">
-            <input type="submit" value="Iniciar sesión">
-        </div>
-    </form>
+
+        <p class="copyright">Copyright &copy; 1999-2020 MercadoLiebre S.R.L.</p>
+    </footer>
 </body>
 
 </html>
